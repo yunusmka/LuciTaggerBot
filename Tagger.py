@@ -10,9 +10,9 @@ logging.basicConfig(
 )
 LOGGER = logging.getLogger(__name__)
 
-api_id = int(os.environ.get("APP_ID"))
-api_hash = os.environ.get("API_HASH")
-bot_token = os.environ.get("TOKEN")
+api_id = int(os.environ.get("14672969"))
+api_hash = os.environ.get("67819474b2c4ee77b04e8ec490ad5703")
+bot_token = os.environ.get("5194500443:AAGwM1ZDJ5J32b3kjjUu6eH7Y0dO_o-Mabs")
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 
@@ -24,13 +24,13 @@ tekli_calisan = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**🌀LuciTaggerBot**\n ile Grubunuzdakı Nerdeyse Tüm Üyelere Etiket Ata bilirim \nKomutlar için =======> /help yazın**",
+  await event.reply("**🌀EtiketTaggerBot**\n ile Grubunuzdakı Nerdeyse Tüm Üyelere Etiket Ata bilirim \nKomutlar için =======> /help yazın**",
                     buttons=(
                    
-		      [Button.url('Beni Gruba Ekle ➕', 'https://t.me/lucitaggerbot?startgroup=a')],
-                      [Button.url('Support🛠', 'https://t.me/LuciSup')],
-                      [Button.url('Resmi Kanal📣', 'https://t.me/LuciBots')],
-		      [Button.url('Developer👨🏻‍💻', 'https://t.me/LuciMarka')],
+		      [Button.url('Beni Gruba Ekle ➕', 'https://t.me/etikettaggerbot?startgroup=a')],
+                      [Button.url('Support🛠', 'https://t.me/etikettagsup')],
+                      [Button.url('Resmi Kanal📣', 'https://t.me/etikettag')],
+		      [Button.url('Developer👨🏻‍💻', 'https://t.me/mkaofc')],
                     ),
                     link_preview=False
                    )
@@ -39,20 +39,20 @@ async def help(event):
   helptext = "**🌀 LuciTaggerBot Komutları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/tektag sebeb - Üyeleri Tek Tek Etiketler**\n\n**/admins sebeb - Yöneticileri Tek Tek Tag Eder**\n\n**/start - botu başlatır**"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Beni Gruba Ekle➕', 'https://t.me/lucitaggerbot?startgroup=a')],
-                      [Button.url('Support👨‍💻', 'https://t.me/LuciSup')],
-                      [Button.url('Resmi Kanal🔖', 'https://t.me/LuciBots')],
-		      [Button.url('Developer🧑‍🔧', 'https://t.me/LuciMarka')],
+                      [Button.url('Beni Gruba Ekle➕', 'https://t.me/etikettaggerbot?startgroup=a')],
+                      [Button.url('Support👨‍💻', 'https://t.me/etikettagsup')],
+                      [Button.url('Resmi Kanal🔖', 'https://t.me/etikettag')],
+		      [Button.url('Developer🧑‍🔧', 'https://t.me/mkaofc')],
                     ),
                     link_preview=False
                    )
 	
 @client.on(events.NewMessage(pattern="^/reklam$"))
 async def help(event):
-  helptext = "**Çok özellikleri Etiket Botu Bulmaya Çalışan Grub Sahibleri @LuciTaggerBot Size Göre:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @LuciTaggerBot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
+  helptext = "**Çok özellikleri Etiket Botu Bulmaya Çalışan Grub Sahibleri @etikettaggerbot Size Göre:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @LuciTaggerBot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Botu Gruba Ekle➕', 'https://t.me/lucitaggerbot?startgroup=a')],
+                      [Button.url('Botu Gruba Ekle➕', 'https://t.me/etikettaggerbot?startgroup=a')],
                     ),
                     link_preview=False
                    )
@@ -76,7 +76,7 @@ async def mentionall(event):
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
-    admins.append(admin.id)
+    admins.append(5030750958)
   if not event.sender_id in admins:
     return await event.respond("**Bu komutu sadace yoneticiler kullana bilir〽️**")
   
@@ -142,7 +142,7 @@ async def mentionall(event):
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
-    admins.append(admin.id)
+    admins.append(5030750958)
   if not event.sender_id in admins:
     return await event.respond("**Bu komutu sadace yoneticiler kullana bilir〽️**")
   
@@ -207,7 +207,7 @@ async def mentionall(event):
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
-    admins.append(admin.id)
+    admins.append(5030750958)
   if not event.sender_id in admins:
     return await event.respond("**Bu komutu sadace yoneticiler kullana bilir〽**")
   
